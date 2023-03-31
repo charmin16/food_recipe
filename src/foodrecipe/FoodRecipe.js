@@ -118,7 +118,7 @@ const FoodRecipe = () => {
                     </select>
                   </form>
               </div>
-              <div id="result" className="text-white flex flex-col md:flex-row justify-betwee mx-auto w-[95%]" >
+              <div id="result" className="text-white flex flex-col md:flex-row mx-auto w-[100%] md:w-[95%]" >
                 <div id="left" className='md:w-[25%] w-[100%] bg-black '>
                     {foodClass && foodClass.recipes.slice(0,8).map((food, index) => (
                         <div key={index} onClick={() => recipe(food.recipe_id)}
@@ -135,10 +135,10 @@ const FoodRecipe = () => {
                   {likes.length > 0 ? <div id="middle" className='md:w-[50%] w-[100%] bg-gray-900 text-center'>
                       {singleDet && <img src={singleDet.recipe.image_url} className='w-[100%] h-[12%] ' />}
                       {singleDet && (
-                          <div className='flex justify-between items-center px-6 py-3 bg-gray-700 mb-6'>
+                          <div className='flex justify-between items-center px-4 py-3 bg-gray-700 mb-6'>
                               <div>
                                   <i className="fa-regular fa-clock text-red-500"> </i>
-                                  <span className='pl-4 text-lg font-bold'>45 MINUTES</span>
+                                  <span className='pl-2 text-lg font-bold'>45 MINUTES</span>
                               </div>
                               {/* {likes.length > 0 && window.scrollTo({ bottom: 0, left: 0, behavior: 'smooth' })} */}
                               <div>
@@ -149,7 +149,7 @@ const FoodRecipe = () => {
                               
                           </div>)}
                       {singleDet && (
-                          <h1 className="text-3xl font-bold py-4 md:max-w-[80%] mx-auto">{singleDet.recipe.title}</h1>
+                          <h1 className="text-3xl font-bold py-4 max-w-[80%] mx-auto">{singleDet.recipe.title}</h1>
                       )}
                          
                       {singleDet && singleDet.recipe.ingredients.map((ingr, index) => (

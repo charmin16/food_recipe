@@ -106,7 +106,7 @@ const FoodRecipe = () => {
                           placeholder='search over 10,000 recipes eg pizza, bean, chicken, etc'
                           className='bg-white w-[90%] md:w-[50%] rounded-full pl-6 py-2 placeholder:text-sm' /> */}
                         <select
-                            className='text-xl w-[55%] rounded-md text-white p-2 bg-gray-600'
+                            className='text-xl w-[75%] md:w-[55%] rounded-md text-white p-2 bg-gray-600'
                             onChange={(e) => fetchRecipe(e.target.value)}
                             value={recipes.name}>
                     
